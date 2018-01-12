@@ -1,0 +1,281 @@
+    /****************
+DEFAULTS
+********************/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #555;
+}
+
+body {
+    background-color: #f5f5f5;
+    
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    
+}
+
+.attribution {
+    width: 12rem;
+    margin: auto;
+    margin-top: 45%;
+
+}
+
+.inline {
+    display: inline;
+    margin: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    padding: 6rem 0 5rem 0;
+    color: white;
+
+    font-family: 'Quattrocento', serif;
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-family: 'Quattrocento', serif;
+    color:red;
+}
+
+.page {
+    margin-top: 6rem;
+    display: none;
+    
+}
+
+
+
+/****************
+Navigation
+********************/
+
+.back-button {
+    display: none;
+    margin-left: -3rem;
+}
+
+.active {
+    display: block;
+    
+}
+
+.search-button,
+.active-back-button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-button {
+    margin-left: -3rem;
+}
+
+
+/****************
+SEARCH BAR
+********************/
+
+.search {
+    height: 3rem;
+    display: inline-block;
+    transition: 0.8s;
+    text-align: center;
+    width: 100%;
+}
+
+#search-button,
+#back-button {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.iconic-property-stroke,
+.iconic-property-fill {
+    fill: #25b575;
+    stroke: #25b575;
+}
+
+.iconic:hover .iconic-property-stroke {
+    fill: #3a8c68;
+    stroke: #3a8c68;
+}
+
+.iconic:hover .iconic-property-fill {
+    fill: #3a8c68;
+    stroke: #3a8c68;
+}
+
+#search-input {
+    width: 78%;
+    height: 3rem;
+    font-size: 0.8rem;
+    border: 1px solid #929292;
+    text-align: center;
+}
+
+#search-input:focus {
+    outline-color: yellow;
+    border: 1px solid #25b575;
+}
+
+.search-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 5rem;
+    z-index: 100;
+    background-color: white;
+    margin: 0;
+    padding-top: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #081c25;
+}
+
+
+/****************
+SEARCH RESULTS
+********************/
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
+    width: 28rem;
+    height: auto;
+    margin: 1rem auto;
+    position: relative;
+    background-color: white;
+    transition: 0.8s;
+    transform: scale(0); 
+}
+
+.card-in{
+    transform: scale(1);
+}
+card-out{
+    transform: scale(0);
+}
+.pointer {cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 6px 25px 0 red;
+}
+
+.imgcontainer {
+    float: left;
+    width: 12.5rem;
+    overflow: hidden;
+    height: 17.5rem;
+    margin-right: 0.5rem;
+    pointer-events: none;
+}
+
+.imgcontainer>img {
+    max-width: 100%;
+    height: 17.5rem;
+    margin: 0 1rem 0 0;
+    pointer-events: none;
+    font-size: 0.8rem;
+}
+
+.card>p {
+    pointer-events: none;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+.card>p:last-child {
+    text-align: left;
+    margin: 1rem;
+}
+
+.card .movietitle {
+    color: darkblue;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin: 1rem 0;
+    font-family: 'Quattrocento', serif;
+}
+
+
+/****************
+RECOMMANDATIONS
+********************/
+
+
+/****************
+PAGINATION
+********************/
+
+.pagination {
+    margin: 1rem auto;
+    text-align: center;
+}
+.pagination button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #26b575;
+    color: white;
+    margin: 1rem;
+    cursor: pointer;
+}
+.pagination input{
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    width: 7rem;
+    
+}
+
+/****************
+LOADING
+********************/
+
+.loading {
+    display: none;
+}
+
+@media screen and (min-width:850px) {
+    .attribution {
+        margin-top: 35%;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    #search-input {
+        width: 50%;
+        font-size: 1rem;
+        transition: 1.2s;
+    }
+    #search-input:focus {
+        width: 78%;
+    }
+    @media screen and (min-width:1200px) {
+        .page {
+            margin: 6rem 11rem;
+        }
+        #search-input {
+            width: 50%;
+        }
+        #search-input:focus {
+            width: 70%;
+        }
+        .attribution {
+            margin-top: 15%;
+        }
+    }
