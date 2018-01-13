@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <title>Movie Recommendations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="./css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quattrocento:400,700" rel="stylesheet">
+    <script>
+
+// window.alert_ = window.alert;
+// window.alert = function () {
+//     debugger;
+//     alert_.apply(window, arguments);
+// };    
+</script>
 </head>
 
-<body style="background-image:url(image/bg.jpg); background-repeat:repeat;background-position:center">
+
+<body style="background-image:url(image/bg.jpg); background-repeat:repeat;background-position:center" >
     <main>
-        <header class="mid search">
+        <header class="top bar">
+          
+           
             <h1>Movie Recommendation</h1>
-            <div class="back-button"><img id="back-button" src="image/BackButton.svg" class="iconic iconic-md" data-direction="left" alt="Back Button" title="Back" /></div>
-            <input type="text" id="search-input" placeholder="Search for movies by keywords ..." />
-            <div class="search-button"><img id="search-button" class="iconic iconic-md" data-src="./image/magnifying-glass.svg" alt="Search" title="Search" /></div>
+            
+            <a id="showtext" onClick="showdiv('keyWards','showtext')">Start!</a>
+    
+            <input type="text" id="keyWards" placeholder="Search for movies by keywords ..." />
+            <input id="button_search" onmouseover="mOver(this)" onmouseout="mOut(this)" type="image" name="imageField" class="search-button" src="image/magnifying-glass.svg" /> 
+            <input id="button_refresh" type="image" class="refresh" onclick="javascript:window.location.reload() " src="image/loop-circular.svg" />
+            
             
         </header>
-
+        
         <div class="page" id="search-results">
             <section class="title"></section>
             <section class="content search-results-content flex-container"></section>
@@ -33,20 +50,19 @@
             <section class="title"></section>
             <section class="content recommend-results-content flex-container"></section>
         </div>
-        
-    </main>
 
-<!--
-    <div class="loading not">
-        <img class="iconic" data-src="./img/loop-circular.svg" title="loop circular" />
-    </div>
--->
+    </main>
 
     <div class="attribution">
         <img src="https://www.themoviedb.org/assets/static_cache/27b65cb40d26f78354a4ac5abf87b2be/images/v4/logos/powered-by-rectangle-green.svg" alt="The Movie DB" />
     </div>
-    <script src="./js/iconic.min.js"></script>
-    <script src="./js/key.js"></script>
-    <script src="./js/main.js"></script>
+    
+    
+     <p2 id="time"></p2>
+    <script src="iconic.min.js"></script>
+    <script src="js/key.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
+
+

@@ -1,134 +1,32 @@
-    /****************
-DEFAULTS
-********************/
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    color: #555;
-}
-
-body {
-    background-color: #f5f5f5;
-    
-}
-
-html {
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.5;
-    
-}
-
-.attribution {
-    width: 12rem;
-    margin: auto;
-    margin-top: 45%;
-
-}
-
-.inline {
-    display: inline;
-    margin: 1rem;
+a { 
+    text-decoration: none; 
 }
 
 h1 {
-    font-size: 2.5rem;
-    padding: 6rem 0 5rem 0;
+    font-size: 3.5rem;
     color: white;
-
     font-family: 'Quattrocento', serif;
 }
 
-h2 {
-    font-size: 1.1rem;
+#showtext {
+    cursor: hand; 
+    cursor:pointer;
+    font-size: 3rem;
     font-family: 'Quattrocento', serif;
     color:red;
 }
 
-.page {
-    margin-top: 6rem;
+
+#keyWards {
+    margin-top: 10px; 
+    width:95%; 
+    border: 1px solid #CCC; 
+    background: #F1F1F1; 
+    padding: 15px; 
     display: none;
-    
 }
 
-
-
-/****************
-Navigation
-********************/
-
-.back-button {
-    display: none;
-    margin-left: -3rem;
-}
-
-.active {
-    display: block;
-    
-}
-
-.search-button,
-.active-back-button {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.search-button {
-    margin-left: -3rem;
-}
-
-
-/****************
-SEARCH BAR
-********************/
-
-.search {
-    height: 3rem;
-    display: inline-block;
-    transition: 0.8s;
-    text-align: center;
-    width: 100%;
-}
-
-#search-button,
-#back-button {
-    height: 2rem;
-    width: 2rem;
-    cursor: pointer;
-}
-
-.iconic-property-stroke,
-.iconic-property-fill {
-    fill: #25b575;
-    stroke: #25b575;
-}
-
-.iconic:hover .iconic-property-stroke {
-    fill: #3a8c68;
-    stroke: #3a8c68;
-}
-
-.iconic:hover .iconic-property-fill {
-    fill: #3a8c68;
-    stroke: #3a8c68;
-}
-
-#search-input {
-    width: 78%;
-    height: 3rem;
-    font-size: 0.8rem;
-    border: 1px solid #929292;
-    text-align: center;
-}
-
-#search-input:focus {
-    outline-color: yellow;
-    border: 1px solid #25b575;
-}
-
-.search-top {
+#keyWards2{
     position: fixed;
     top: 0;
     right: 0;
@@ -142,10 +40,61 @@ SEARCH BAR
     background-color: #081c25;
 }
 
+p2 {
+    background-color: black;
+    border:2px solid;
+    border-radius:25px;
+    color :red;
+    box-shadow: 10px 10px 5px #888888;
+    text-align: center;
+}
 
-/****************
-SEARCH RESULTS
-********************/
+#button_search{
+height: 20px;
+width: 50px;
+border-top-width: 0px;
+border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 0px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+cursor:pointer;
+}
+
+#button_refresh{
+height: 20px;
+width: 50px;
+border-top-width: 0px;
+border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 0px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+cursor:pointer;
+}
+
+.pagination {
+    margin: 1rem auto;
+    text-align: center;
+}
+.pagination button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #26b575;
+    color: white;
+    margin: 1rem;
+    cursor: pointer;
+}
+.pagination input{
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    width: 7rem;
+    
+}
 
 .flex-container {
     display: flex;
@@ -160,13 +109,13 @@ SEARCH RESULTS
     position: relative;
     background-color: white;
     transition: 0.8s;
-    transform: scale(0); 
+    transform: scale(1); 
 }
 
 .card-in{
-    transform: scale(1);
+    transform: scale(1) !important;
 }
-card-out{
+.card-out{
     transform: scale(0);
 }
 .pointer {cursor: pointer;
@@ -176,6 +125,18 @@ card-out{
     box-shadow: 0 6px 25px 0 red;
 }
 
+.inline {
+    display: inline;
+    margin: 1rem;
+}
+
+.attribution {
+    width: 12rem;
+    margin: auto;
+    margin-top: 45%;
+
+}
+
 .imgcontainer {
     float: left;
     width: 12.5rem;
@@ -183,6 +144,12 @@ card-out{
     height: 17.5rem;
     margin-right: 0.5rem;
     pointer-events: none;
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-family: 'Quattrocento', serif;
+    color:red;
 }
 
 .imgcontainer>img {
@@ -214,37 +181,6 @@ card-out{
 }
 
 
-/****************
-RECOMMANDATIONS
-********************/
-
-
-/****************
-PAGINATION
-********************/
-
-.pagination {
-    margin: 1rem auto;
-    text-align: center;
-}
-.pagination button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #26b575;
-    color: white;
-    margin: 1rem;
-    cursor: pointer;
-}
-.pagination input{
-    font-size: 1rem;
-    padding: 0.5rem 0.5rem;
-    width: 7rem;
-    
-}
-
-/****************
-LOADING
-********************/
 
 .loading {
     display: none;
@@ -279,3 +215,4 @@ LOADING
             margin-top: 15%;
         }
     }
+
